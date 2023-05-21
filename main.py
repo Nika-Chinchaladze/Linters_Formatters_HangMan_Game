@@ -8,9 +8,9 @@ from pictures import GameArt
 game_art = GameArt()
 print(game_art.return_logo())
 
-# Here user will define lowest and highest 
+# Here user will define lowest and highest
 # Boundaries for random number.
-# User must provide Integer number, 
+# User must provide Integer number,
 # In other case game won't go on next stage.
 boundaries_is_defined_correctly = False
 while not boundaries_is_defined_correctly:
@@ -28,7 +28,7 @@ player_life = 7
 game_is_ended = False
 while not game_is_ended:
     # Here we check, if player provides number.
-    # If user provides string that can't be converted into number, 
+    # If user provides string that can't be converted into number,
     # Then we will repeat the asking process.
     try:
         user_guess = int(input(f"Guess the Number between {low_num} and {high_num}: "))
@@ -45,13 +45,15 @@ while not game_is_ended:
             # Or higher than chosen random number:
             feedback = "Lower" if user_guess < random_number else "Higher"
             contrary = "Lower" if feedback == "Higher" else "Higher"
-            print(f"Your answer ({user_guess}) is {feedback} than desired random number!")
+            print(
+                f"Your answer ({user_guess}) is {feedback} than desired random number!"
+            )
             print(f"Try {contrary}! life - ({player_life})")
-        
+
             # Here we print cross - border line between previous and next stages:
             print("----------------------------------------------------------\n")
-        
-        # Here we will end the game, 
+
+        # Here we will end the game,
         # If player doesn't have lifes left to continue playing.
         if player_life == 0:
             game_is_ended = True

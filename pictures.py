@@ -5,7 +5,7 @@ method and game logo by using 'return-logo' method.
 """
 
 GAME_STAGES = {
-"1": """
+    "1": """
   +---+
   |   |
   O   |
@@ -14,7 +14,7 @@ GAME_STAGES = {
       |
 =========
 """,
-"2": """
+    "2": """
   +---+
   |   |
   O   |
@@ -23,7 +23,7 @@ GAME_STAGES = {
       |
 =========
 """,
-"3": """
+    "3": """
   +---+
   |   |
   O   |
@@ -32,7 +32,7 @@ GAME_STAGES = {
       |
 =========
 """,
-"4": """
+    "4": """
   +---+
   |   |
   O   |
@@ -41,7 +41,7 @@ GAME_STAGES = {
       |
 =========
 """,
-"5": """
+    "5": """
   +---+
   |   |
   O   |
@@ -50,7 +50,7 @@ GAME_STAGES = {
       |
 =========
 """,
-"6": """
+    "6": """
   +---+
   |   |
   O   |
@@ -59,7 +59,7 @@ GAME_STAGES = {
       |
 =========
 """,
-"7": """
+    "7": """
   +---+
   |   |
       |
@@ -68,7 +68,7 @@ GAME_STAGES = {
       |
 =========
 """,
-"logo": """ 
+    "logo": """ 
  _                                             
 | |                                            
 | |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
@@ -85,12 +85,12 @@ class GameArt:
     """class object has access to HangMan game-stages."""
 
     def __init__(self):
-        # Here we are using private attribute, 
+        # Here we are using private attribute,
         # Because this attribute must be available only
-        # Inside this class, and mustn't be available 
+        # Inside this class, and mustn't be available
         # From outside or not from any child class.
         self.__game_stage = GAME_STAGES
-    
+
     def return_stage(self, stage_index: str):
         """returns HangMan game's concrete stage by using 'stage_index'
         parameter, that must be provided as a string.
@@ -101,7 +101,7 @@ class GameArt:
         if stage_index in allowed_indexes:
             return self.__game_stage[stage_index]
         return "Empty String"
-    
+
     def return_logo(self):
         """returns HangMan game logo."""
         return self.__game_stage["logo"]
