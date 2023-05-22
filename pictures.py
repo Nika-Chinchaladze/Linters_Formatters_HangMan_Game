@@ -4,8 +4,9 @@ based on 'stage_index' parameter with 'return_stage'
 method and game logo by using 'return-logo' method.
 """
 
-GAME_STAGES = {
-    "1": """
+# pylint: disable=anomalous-backslash-in-string
+
+FIRST = """
   +---+
   |   |
   O   |
@@ -13,8 +14,9 @@ GAME_STAGES = {
  / \  |
       |
 =========
-""",
-    "2": """
+"""
+
+SECOND = """
   +---+
   |   |
   O   |
@@ -22,8 +24,9 @@ GAME_STAGES = {
  /    |
       |
 =========
-""",
-    "3": """
+"""
+
+THIRD = """
   +---+
   |   |
   O   |
@@ -31,8 +34,9 @@ GAME_STAGES = {
       |
       |
 =========
-""",
-    "4": """
+"""
+
+FOURTH = """
   +---+
   |   |
   O   |
@@ -40,8 +44,9 @@ GAME_STAGES = {
       |
       |
 =========
-""",
-    "5": """
+"""
+
+FIFTH = """
   +---+
   |   |
   O   |
@@ -49,8 +54,9 @@ GAME_STAGES = {
       |
       |
 =========
-""",
-    "6": """
+"""
+
+SIXTH = """
   +---+
   |   |
   O   |
@@ -58,8 +64,9 @@ GAME_STAGES = {
       |
       |
 =========
-""",
-    "7": """
+"""
+
+SEVENTH = """
   +---+
   |   |
       |
@@ -67,8 +74,9 @@ GAME_STAGES = {
       |
       |
 =========
-""",
-    "logo": """ 
+"""
+
+LOGO = """
  _                                             
 | |                                            
 | |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
@@ -77,7 +85,17 @@ GAME_STAGES = {
 |_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
                     __/ |                      
                    |___/
-""",
+"""
+
+GAME_STAGES = {
+    "1": FIRST,
+    "2": SECOND,
+    "3": THIRD,
+    "4": FOURTH,
+    "5": FIFTH,
+    "6": SIXTH,
+    "7": SEVENTH,
+    "logo": LOGO,
 }
 
 
